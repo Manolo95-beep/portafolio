@@ -8,13 +8,84 @@
     --blanco: #ffffff;
 }
 
+/* Generales */
 body{
     font-family: "Roboto Slab", serif;
+    background-color: var(--crema);
+    color: var(--cafe-oscuro);
 }
 
+h1, h2, h3, h5, h6{
+    font-weight: bold;
+}
+
+/* NavBar */
+nav {
+    background-color: var(--roble);
+}
+
+.navbar .nav-link:hover {
+    color: var(--roble);
+    background-color: var(--cafe-oscuro);
+}
+
+/* Header */
 header{
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.contacto {
+    display: flex;
+    gap: 30px;
+}
+
+.contacto a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--cafe-oscuro);
+}
+
+/* Sobre Mi */
+
+
+/* Habilidades */
+.skill-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: var(--cafe-oscuro);
+}
+
+/* Experiencia */
+#experiencia .card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;    
+    border-color: var(--bosque) !important;
+
+}
+
+/* Estudios */
+
+/* Footer */
+footer{
+    background-color: var(--roble);
 }
