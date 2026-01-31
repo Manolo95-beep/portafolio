@@ -1,91 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --roble: #A67B5B;
-    --bosque: #2D5A27;
-    --crema: #FFFBF0;
-    --cafe-oscuro: #4E342E;
-    --blanco: #ffffff;
+  --canela: #D2B48C;
+  --carbon: #343A40;
+  --blanco: #FFFFFF;
+  --barniz: #E67E22;
+  --texto-suave: #555555;
 }
+
 
 /* Generales */
 body{
     font-family: "Roboto Slab", serif;
-    background-color: var(--crema);
-    color: var(--cafe-oscuro);
+    background-color: var(--blanco);
+    color: var(--texto-suave);
+    overflow-x: hidden;
 }
 
-h1, h2, h3, h5, h6{
-    font-weight: bold;
+
+/* Títulos*/
+h1, h2, h3, h4, h5{
+    color: var(--carbon);
+    font-weight: 700;
 }
+
 
 /* NavBar */
-nav {
-    background-color: var(--roble);
+nav{
+    background-color: var(--carbon);
 }
 
-.navbar .nav-link:hover {
-    color: var(--roble);
-    background-color: var(--cafe-oscuro);
+
+.navbar .navbar-brand, .navbar .nav-link{
+    color: var(--canela);
 }
+
+
+.navbar .nav-link:hover {
+    color: var(--barniz);
+}
+
 
 /* Header */
 header{
-    background-image: url(../img/background.jpg);
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(../img/background.jpg);
     background-size: cover;
     background-position: center;
+    padding: 100px 0;
 }
 
-.contacto {
-    display: flex;
-    gap: 30px;
+header p{
+    color: var(--barniz);
 }
 
-.contacto a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+.contacto a{
     text-decoration: none;
-    color: var(--cafe-oscuro);
+    color: var(--carbon);
+    transition: color 0.3s;
 }
 
-/* Sobre Mi */
 
-
-/* Habilidades */
-.skill-card {
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+.contacto a:hover {
+    color: var(--barniz);
 }
 
-.skill-card:hover {
-  transform: translateY(-10px);
-}
 
-.skill-card h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  color: var(--cafe-oscuro);
-}
-
-/* Experiencia */
-#experiencia .card{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+/* Cards Habilidades, Experiencia, Estudios, Proyectos */
+.card{
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
 }
 
 
 .card:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;    
-    border-color: var(--bosque) !important;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--canela);
+}
+
+
+/* Proyectos */
+#proyectos a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+#proyectos .card-img-top{
+    height: 200px;
+    object-fit: cover;
+
 
 }
 
-/* Estudios */
 
 /* Footer */
 footer{
-    background-color: var(--roble);
+    background-color: var(--carbon);
+    color: var(--blanco);
 }
